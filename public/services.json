@@ -1,72 +1,73 @@
-[
+ [
     {
       "name": "Haircut and Style",
-      "price": "$45",
+      "price": 45,
       "description": "Get a fresh new haircut and a stylish hairdo by our expert hairstylists. We'll help you achieve the perfect look that suits your personality and preferences.",
       "category": "Hair Services",
       "image": "https://example.com/haircut.jpg"
     },
     {
       "name": "Deluxe Facial",
-      "price": "$75",
+      "price": 75,
       "description": "Indulge in a luxurious facial treatment that includes deep cleansing, exfoliation, and a relaxing face massage. Our estheticians will customize the treatment to your skin type for a glowing complexion.",
       "category": "Skin Care",
       "image": "https://example.com/facial.jpg"
     },
     {
       "name": "Manicure and Pedicure",
-      "price": "$35",
+      "price": 35,
       "description": "Treat your hands and feet to a pampering session with our professional manicure and pedicure services. We'll shape your nails, take care of cuticles, and apply a beautiful polish of your choice.",
       "category": "Nail Care",
       "image": "https://example.com/manicure.jpg"
     },
     {
       "name": "Eyebrow Threading",
-      "price": "$15",
+      "price": 15,
       "description": "Achieve perfectly shaped eyebrows with our gentle threading technique. Our experts will shape and define your brows to enhance your natural features.",
       "category": "Waxing and Threading",
       "image": "https://example.com/eyebrow-threading.jpg"
     },
     {
       "name": "Makeup Application",
-      "price": "$60",
+      "price": 60,
       "description": "Let our professional makeup artists enhance your beauty with a flawless makeup application. Whether it's for a special occasion or a night out, we'll create the look you desire.",
       "category": "Makeup Services",
       "image": "https://example.com/makeup.jpg"
     },
     {
       "name": "Swedish Massage",
-      "price": "$80",
+      "price": 80,
       "description": "Relax and unwind with a rejuvenating Swedish massage. Our skilled massage therapists will use long, gliding strokes to ease tension and promote relaxation.",
       "category": "Massage Therapy",
       "image": "https://example.com/swedish-massage.jpg"
     },
     {
       "name": "Bridal Hair and Makeup",
-      "price": "$250",
+      "price": 250,
       "description": "For your special day, our salon offers complete bridal hair and makeup services. Our talented team will create a stunning look that will make you feel like a princess.",
       "category": "Special Event Services",
       "image": "https://example.com/bridal-hair-makeup.jpg"
     },
     {
       "name": "Root Touch-Up",
-      "price": "$60",
+      "price": 60,
       "description": "Keep your hair color looking vibrant and fresh with a root touch-up. Our color specialists will match your existing shade to cover any regrowth and maintain a seamless look.",
       "category": "Hair Services",
       "image": "https://example.com/root-touch-up.jpg"
     },
     {
       "name": "Anti-Aging Facial",
-      "price": "$90",
-      "description": "Reverse the signs of aging with our targeted anti-aging facial treatment. We'll use specialized products and techniques to reduce fine lines, wrinkles, and improve skin elasticity.",
+      "price": 90,
+      "description": "Reverse the signs of aging with our targeted anti-aging facial treatment. We'll use specialized products and techniques to reduce fine lines, wrinkles, and improve skin elasticity. Let us handle your skin professionally.",
       "category": "Skin Care",
       "image": "https://example.com/anti-aging-facial.jpg"
     },
     {
-    "name": "Gel Nail Extensions",
-    "price": "$50",
-    "description": "Get long-lasting and durable nail extensions with our gel nail service. We'll create beautiful and natural-looking extensions that won't chip or peel.",
-    "category": "Nail Care",
-    "image": "https://example.com/gel-nail-extensions.jpg"
+      "name": "Gel Nail Extensions",
+      "price": 50,
+      "description": "Get long-lasting and durable nail extensions with our gel nail service. We'll create beautiful and natural-looking extensions that won't chip or peel. Let us handle your nails professionally.",
+      "category": "Nail Care",
+      "image": "https://example.com/gel-nail-extensions.jpg"
     }
-    ]
+  ]
+

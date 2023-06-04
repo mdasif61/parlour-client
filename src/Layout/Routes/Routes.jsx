@@ -3,6 +3,7 @@ import Main from "../Main";
 import Home from "../../Home/Home";
 import Login from "../../LogingLayout/Login";
 import Register from "../../LogingLayout/Register";
+import Bookings from "../../pages/Bookings";
 
   const router=createBrowserRouter([
     {
@@ -11,7 +12,8 @@ import Register from "../../LogingLayout/Register";
         children:[
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader:()=>fetch('http://localhost:5000/total-services')
             },
             {
               path:'/login',
@@ -20,6 +22,10 @@ import Register from "../../LogingLayout/Register";
             {
               path:'/register',
               element:<Register></Register>
+            },
+            {
+              path:'/bookings/:id',
+              element:<Bookings></Bookings>
             }
         ]
     }
