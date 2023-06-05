@@ -1,10 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+
 import sectionImg from "../assets/images/engin-akyurt-g-m8EDc4X6Q-unsplash 1.png";
 import useUsers from "../hooks/useUsers";
+import useAllService from "../hooks/useAllService";
 
 const SectionOne = () => {
   const { allUser } = useUsers();
-  const {total}=useLoaderData()
+  // const {total}=useLoaderData()
+  const {total}=useAllService()
 
   return (
     <div className="flex my-16">

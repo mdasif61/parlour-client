@@ -1,10 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+
 import useServices from "../hooks/useServices";
 import ServiceCart from "./ServiceCart";
+import useAllService from "../hooks/useAllService";
 
 const Services = () => {
   const { services, setServiceLimit, serviceLimit } = useServices();
-  const { total } = useLoaderData();
+  // const { total } = useLoaderData();
+  const {total}=useAllService()
 
   const handleShow = () => {
     setServiceLimit(total);

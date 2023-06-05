@@ -7,16 +7,6 @@ const ListBooked = ({ list }) => {
   const { service, desc, status, _id } = list;
   const {refetch}=useBookings()
 
-<<<<<<< HEAD
-    const handleDelete=(id)=>{
-        axios.delete(`http://localhost:5000/booked/${id}`)
-        .then(data=>{
-            if(data.data.deletedCount>0){
-                alert('services deleted')
-            }
-        })
-    }
-=======
   const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -38,7 +28,6 @@ const ListBooked = ({ list }) => {
       }
     });
   };
->>>>>>> d303e38c11dabd2105303ae35a672fa0e314b11c
 
   return (
     <div className="border-2 p-5 relative border-pink-600 rounded-lg bg-white">

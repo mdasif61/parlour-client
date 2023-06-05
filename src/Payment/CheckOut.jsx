@@ -1,12 +1,25 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useAxiosSecure from "../hooks/useAxiosSecure";
+import useAuth from "../hooks/useAuth";
 
-const CheckOut = () => {
+const CheckOut = ({price}) => {
+
+    const {user}=useAuth()
 
     const [error, setError] = useState('')
-
     const stripe = useStripe()
     const element = useElements()
+    const [axiosSecure]=useAxiosSecure()
+    const [clientSecret,setClientSecret]=useState('')
+
+    useEffect(()=>{
+        axiosSecure.post('/payment-intent',{price})
+        .then(res=>{
+            console.log(res)
+            setClientSecret(res.data.clientSecret)
+        })
+    },[axiosSecure,price])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -28,7 +41,22 @@ const CheckOut = () => {
             setError(error.message)
         }
 
-        
+        const {paymentIntent, error:confirmError}=await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method:{
+                    card:card,
+                    billing_details:{
+                        name:user?.displayName || 'anonymus',
+                        email:user?.email || 'anonymus'
+                    }
+                }
+            }
+        )
+        if(confirmError){
+            console.log(confirmError)
+            setError(confirmError.message)
+        }
 
     }
 
@@ -52,6 +80,7 @@ const CheckOut = () => {
                     }}
                 />
                 <div className="text-center mt-20">
+                    <h2>Your Service Charged Will Be ${price}</h2>
                 <button className="btn bg-pink-600 text-white hover:text-pink-600 my-5 w-36" type="submit" disabled={!stripe || !element}>
                     Pay
                 </button>

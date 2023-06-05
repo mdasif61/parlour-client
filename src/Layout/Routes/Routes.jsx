@@ -16,7 +16,7 @@ import BookingList from "../../Dashboard/BookingList";
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch('http://localhost:5000/total-services')
+                // loader:()=>fetch('')
             },
             {
               path:'/login',
