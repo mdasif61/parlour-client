@@ -20,6 +20,7 @@ const Bookings = () => {
     event.preventDefault();
     const phone = event.target.phone.value;
     const address = event.target.address.value;
+    const email=event.target.email.value;
     const { name, category, price, _id } = booked;
     const bookedService = {
       service: name,
@@ -28,6 +29,9 @@ const Bookings = () => {
       bookedId: _id,
       phone,
       address,
+      email,
+      desc:booked.description,
+      status:'Pending'
     };
 
     axiosSecure
@@ -87,6 +91,7 @@ const Bookings = () => {
                 <input
                   className="w-full focus:outline-none border h-12 py-2 px-4 mt-1"
                   type="email"
+                  name="email"
                   readOnly
                   value={user?.email}
                 />

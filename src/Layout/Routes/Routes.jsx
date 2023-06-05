@@ -6,6 +6,7 @@ import Register from "../../LogingLayout/Register";
 import Bookings from "../../pages/Bookings";
 import Dashboard from "../../Dashboard/Dashboard";
 import Book from "../../Dashboard/Book";
+import BookingList from "../../Dashboard/BookingList";
 
   const router=createBrowserRouter([
     {
@@ -38,6 +39,10 @@ import Book from "../../Dashboard/Book";
         {
           path:'book',
           element:<Book></Book>
+        },
+        {
+          path:'bookinglist',
+          element:<BookingList></BookingList>
         }
       ]
     }
