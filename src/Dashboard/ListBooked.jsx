@@ -5,7 +5,12 @@ const ListBooked = ({list}) => {
     const {service,desc, status, _id}=list
 
     const handleDelete=(id)=>{
-        axios.delete()
+        axios.delete(`http://localhost:5000/booked/${id}`)
+        .then(data=>{
+            if(data.data.deletedCount>0){
+                alert('services deleted')
+            }
+        })
     }
 
     return (
